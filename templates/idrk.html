@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text NAS</title>
+</head>
+<body>
+    <h1 style="color: aqua; text-align: center">Text NAS v0.0</h1>
+    <h3>Files in your NAS right now:</h3>
+    {% for name in names %}
+        <h4 style="color: blueviolet"> <a href="/uploads/{{folder}}/{{name}}">{{name}}</a></h4>
+    {% endfor %}
+</body>
+</html>
