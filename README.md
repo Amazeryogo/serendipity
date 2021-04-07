@@ -24,8 +24,8 @@ ie: /home/john/mybuisness
  Thanks!
  
  
- The operating systems known to run this software:
+## The operating systems known to run this software:
  
- Debian/Raspbian,
+ ### Debian/Raspbian,
  
- Ubuntu/mint/Pop_OS
+ ### Ubuntu/mint/Pop_OS
