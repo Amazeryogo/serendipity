@@ -18,7 +18,7 @@ ie: /home/john/mybuisness <br/>
  
  flask run --host=0.0.0.0 --port=5000
  
-### and go to http://[IPV4 address]:5000
+### and go to http://[IPV4 address]:5000 from any other computer in the same wifi network as your 'nas'
  
  
 ### Thanks!
