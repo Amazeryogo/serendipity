@@ -10,18 +10,18 @@ A new job for my pi
 
 NOTE: change the UPLOAD_FOLDER variable on app.py as the directory of the files you want to see
 
-ie: /home/john/mybuisness
+ie: /home/john/mybuisness <br/>
     /home/moby/Documents/work/lol
  
  
- next run 
+ ### run the command
  
  flask run --host=0.0.0.0 --port=5000
  
- and go to http://[IPV4 address]:5000
+### and go to http://[IPV4 address]:5000
  
  
- Thanks!
+### Thanks!
  
  
 ## The operating systems known to run this software:
