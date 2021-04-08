@@ -25,6 +25,4 @@ It should work by now
 
  ## The operating systems known to run this software:
  
- ### Debian/Raspbian,
- 
- ### Ubuntu/mint/Pop_OS
+### The debian family (Debian,Raspbian,Ubuntu etc)
