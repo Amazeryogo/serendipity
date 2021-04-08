@@ -20,11 +20,10 @@ ie: /home/john/mybuisness <br/>
  
 ### and go to http://[IPV4 address]:5000 from any other computer in the same wifi network as your 'nas'
  
- 
-### Thanks!
- 
- 
-## The operating systems known to run this software:
+It should work by now
+
+
+ ## The operating systems known to run this software:
  
  ### Debian/Raspbian,
  
