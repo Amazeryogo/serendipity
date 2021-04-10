@@ -1,10 +1,10 @@
-# app.py
 from flask import *
 from flask_autoindex import AutoIndex
 from werkzeug.utils import secure_filename
 import os
 
 UPLOAD_FOLDER = "<PATH>"
+# pls change this, thanks!
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 
