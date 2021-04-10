@@ -1,0 +1,1 @@
+Flask-AutoIndex==0.6.6
