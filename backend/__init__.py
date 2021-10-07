@@ -3,8 +3,12 @@ from flask_autoindex import AutoIndex
 from werkzeug.utils import secure_filename
 import os
 
-UPLOAD_FOLDER = "<PATH>"
-# pls change this, thanks!
+try:  
+   UPLOAD_FOLDER =  os.environ["UPF"]
+except KeyError: 
+   print "Please set the environment variable FOO"
+   sys.exit(1)
+    
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 
