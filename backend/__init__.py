@@ -4,7 +4,7 @@ from flask_autoindex import AutoIndex
 from werkzeug.utils import secure_filename
 import os
 
-UPLOAD_FOLDER = "/home/suvid/uploads/"
+UPLOAD_FOLDER = "/home/<you>/uploads/"
 # pls change this, thanks!
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
