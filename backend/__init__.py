@@ -4,7 +4,7 @@ from flask_autoindex import AutoIndex
 from werkzeug.utils import secure_filename
 import os
 
-UPLOAD_FOLDER = "/home/<you>/uploads/"
+UPLOAD_FOLDER = "/home/<hmmm>"
 # pls change this, thanks!
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
@@ -12,6 +12,8 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 app = Flask(__name__)
 AutoIndex(app, browse_root=UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.secret_key = 'super secret key'
+app.config['SESSION_TYPE'] = 'filesystem'
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
