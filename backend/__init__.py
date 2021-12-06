@@ -1,9 +1,10 @@
+
 from flask import *
 from flask_autoindex import AutoIndex
 from werkzeug.utils import secure_filename
 import os
 
-UPLOAD_FOLDER = "<PATH>"
+UPLOAD_FOLDER = "/home/suvid/uploads/"
 # pls change this, thanks!
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
@@ -17,6 +18,7 @@ def allowed_file(filename):
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
+    x = request.args.get('path')
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
@@ -28,7 +30,11 @@ def upload_file():
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            if x != None:
+                path = app.config['UPLOAD_FOLDER'] + x
+                file.save(os.path.join(path, filename))
+            else:
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect('/')
 
     return '''  
@@ -40,4 +46,3 @@ def upload_file():
       <input type=submit value=Upload>
     </form>
     '''
-
