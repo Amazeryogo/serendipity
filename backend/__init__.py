@@ -2,9 +2,12 @@
 from flask import *
 from flask_autoindex import AutoIndex
 from werkzeug.utils import secure_filename
-import os
+import os, json
+with open('backend/path.json', 'r') as f:
+    k = json.loads(f.read())
 
-UPLOAD_FOLDER = "/home/<hmmm>"
+
+UPLOAD_FOLDER = k['path']
 # pls change this, thanks!
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
