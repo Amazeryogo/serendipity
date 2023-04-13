@@ -1,0 +1,6 @@
+{
+  "path": "/home/suvid/",
+  "host": "0.0.0.0",
+  "port": 8080,
+  "allowed_extensions" : ["txt", "pdf", "png", "jpg", "jpeg", "gif"]
+}

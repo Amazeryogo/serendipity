@@ -3,12 +3,11 @@ from flask_autoindex import AutoIndex
 from werkzeug.utils import secure_filename
 import os, json
 
-with open('backend/path.json', 'r') as f:
+with open('backend/settings.json', 'r') as f:
     k = json.loads(f.read())
 
 UPLOAD_FOLDER = k['path']
-# pls change this, thanks!
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = k['allowed_extensions']
 
 app = Flask(__name__)
 AutoIndex(app, browse_root=UPLOAD_FOLDER)
